@@ -1,0 +1,25 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: eureka
+#  security:
+#    user:
+#      name: user
+#      password: 123
+
+
+#因为当前是单机的，故需要如下配置
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+#      defaultZone: http://localhost:8000/eureka
+      defaultZone: http://localhost:10000/eureka
+    healthcheck:
+      enabled: true
+#服务注册中心实例的主机名
+  instance:
+    hostname: localhost
+
